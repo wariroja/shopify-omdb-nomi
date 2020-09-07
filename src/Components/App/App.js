@@ -24,6 +24,7 @@ class App extends React.Component {
     };
     this.addMovie = this.addMovie.bind(this);
     this.removeMovie = this.removeMovie.bind(this);
+    this.search = this.search.bind(this);
   }
 
   addMovie(movie) {
@@ -44,6 +45,11 @@ class App extends React.Component {
     );
     this.setState({ nominateList: newNominateList });
   }
+
+  search(term) {
+    console.log(term);
+  }
+
   render() {
     return (
       <div>
@@ -51,7 +57,7 @@ class App extends React.Component {
           N<span className='highlight'>OM</span>I
         </h1>
         <div className='App'>
-          <SearchBar />
+          <SearchBar search={search} />
           <div className='App-nominatelist'>
             <SearchResults
               searchResults={this.state.searchResults}
