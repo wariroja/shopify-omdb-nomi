@@ -10,11 +10,16 @@ class SearchBar extends React.Component {
     this.handleChange = this.handleChange.bind(this);
   }
   search(term) {
-    this.props.search(this.state.term);
+    return fetch(`http://www.omdbapi.com/?apikey=5f9e3ef&t=${this.state.term}`)
+      .then((response) => response.json())
+      .then((jsonResponse) => {
+        console.log(jsonResponse);
+      });
   }
 
   handleChange(event) {
     this.setState({ term: event.target.value });
+    console.log(this.state.term);
   }
   render() {
     return (

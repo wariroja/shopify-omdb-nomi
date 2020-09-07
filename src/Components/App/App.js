@@ -57,7 +57,7 @@ class App extends React.Component {
           N<span className='highlight'>OM</span>I
         </h1>
         <div className='App'>
-          <SearchBar search={search} />
+          <SearchBar search={this.search} />
           <div className='App-nominatelist'>
             <SearchResults
               searchResults={this.state.searchResults}

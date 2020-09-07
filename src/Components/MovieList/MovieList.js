@@ -7,7 +7,7 @@ import Movie from '../Movie/Movie';
 class MovieList extends React.Component {
   render() {
     return (
-      <div class='MovieList'>
+      <div className='MovieList'>
         {this.props.movies.map((movie) => (
           <Movie
             movie={movie}
