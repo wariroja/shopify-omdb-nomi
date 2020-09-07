@@ -47,7 +47,11 @@ class App extends React.Component {
   }
 
   search(term) {
-    console.log(term);
+    return fetch(`http://www.omdbapi.com/?apikey=5f9e3ef&t=${term}`)
+      .then((response) => response.json())
+      .then((jsonResponse) => {
+        console.log(jsonResponse);
+      });
   }
 
   render() {
