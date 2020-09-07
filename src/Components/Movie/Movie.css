@@ -1,0 +1,40 @@
+/** @format */
+
+.Movie {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(256, 256, 256, 0.8);
+}
+
+.Movie-action {
+  cursor: pointer;
+  padding: 0.5rem;
+  font-size: 0.83rem;
+  font-family: 'Work Sans', sans-serif;
+  transition: color 0.25s;
+  border: 0px;
+  background-color: rgba(0, 0, 0, 0);
+  color: #fff;
+}
+
+.Movie:hover {
+  color: rgba(265, 265, 265, 0.5);
+}
+
+.Movie-information {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 72px;
+}
+
+.Movie-information h3 {
+  margin-bottom: 0.22rem;
+}
+
+.Movie-information p {
+  font-size: 0.83rem;
+  font-weight: 300;
+  color: rgba(256, 256, 256, 0.8);
+}
