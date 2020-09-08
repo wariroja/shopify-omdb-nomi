@@ -13,7 +13,7 @@ const Omdb = {
           year: item.Year,
           id: item.imdbID,
         }));
-        console.log(result);
+        return result;
       });
   },
 };

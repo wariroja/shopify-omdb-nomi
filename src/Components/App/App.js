@@ -12,11 +12,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       searchResults: [],
-      nominateList: [
-        { title: 'title1', year: 'year1', id: 4 },
-        { title: 'title2', year: 'year2', id: 5 },
-        { title: 'title3', year: 'year3', id: 6 },
-      ],
+      nominateList: [],
     };
     this.addMovie = this.addMovie.bind(this);
     this.removeMovie = this.removeMovie.bind(this);
@@ -42,8 +38,16 @@ class App extends React.Component {
     this.setState({ nominateList: newNominateList });
   }
 
-  search(term) {
-    Omdb.search(term).then((searchResults) => console.log(searchResults));
+  async search(term) {
+    // Omdb.search(term).then((result) => {
+    //   console.log('hello');
+    //   return this.setState({searchResults: result});
+    // });
+    await Omdb.search(term).then((result) =>
+      this.setState({ searchResults: result })
+    );
+
+    // this.setState({ searchResults: result });
   }
 
   render() {
