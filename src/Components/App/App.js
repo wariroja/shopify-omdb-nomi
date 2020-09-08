@@ -5,17 +5,13 @@ import './App.css';
 import SearchBar from '../SearchBar/SearchBar';
 import SearchResults from '../SearchResults/SearchResults';
 import NominateList from '../NominateList/NominateList';
-import Movie from '../Movie/Movie';
+import Omdb from '../util/Omdb';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      searchResults: [
-        { title: 'title1', year: 'year1', id: 1 },
-        { title: 'title2', year: 'year2', id: 2 },
-        { title: 'title3', year: 'year3', id: 3 },
-      ],
+      searchResults: [],
       nominateList: [
         { title: 'title1', year: 'year1', id: 4 },
         { title: 'title2', year: 'year2', id: 5 },
@@ -47,11 +43,7 @@ class App extends React.Component {
   }
 
   search(term) {
-    return fetch(`http://www.omdbapi.com/?apikey=5f9e3ef&t=${term}`)
-      .then((response) => response.json())
-      .then((jsonResponse) => {
-        console.log(jsonResponse);
-      });
+    Omdb.search(term).then((searchResults) => console.log(searchResults));
   }
 
   render() {

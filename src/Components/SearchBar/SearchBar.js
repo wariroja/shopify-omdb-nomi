@@ -13,14 +13,17 @@ class SearchBar extends React.Component {
   //   this.props.search(this.state.term);
   // }
 
-  handleChange(event) {
-    this.setState({ term: event.target.value });
+  handleChange = async function (e) {
+    await this.setState({ term: e.target.value });
     this.props.search(this.state.term);
-  }
+  };
   render() {
     return (
       <div className='SearchBar'>
-        <input placeholder='Enter A Movie Title' onChange={this.handleChange} />
+        <input
+          placeholder='Enter A Movie Title'
+          onChange={(e) => this.handleChange(e)}
+        />
       </div>
     );
   }

@@ -7,7 +7,7 @@ import MovieList from '../MovieList/MovieList';
 class NominateList extends React.Component {
   render() {
     return (
-      <div class='NominateList'>
+      <div className='NominateList'>
         <h2>Nominate List</h2>
         <MovieList
           movies={this.props.nominateList}
