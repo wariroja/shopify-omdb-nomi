@@ -2,15 +2,13 @@
 
 import React from 'react';
 import './SearchBar.css';
+import SearchResults from '../SearchResults/SearchResults';
 class SearchBar extends React.Component {
   constructor(props) {
     super(props);
     this.state = { term: '' };
     this.handleChange = this.handleChange.bind(this);
   }
-  // search(term) {
-  //   this.props.search(this.state.term);
-  // }
 
   handleChange = async function (e) {
     await this.setState({ term: e.target.value });
@@ -23,9 +21,6 @@ class SearchBar extends React.Component {
           placeholder='Enter A Movie Title'
           onChange={(e) => this.handleChange(e)}
         />
-        {/* <button className='SearchButton' onClick={this.search}>
-          SEARCH
-        </button> */}
       </div>
     );
   }

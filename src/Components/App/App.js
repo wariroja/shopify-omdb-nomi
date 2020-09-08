@@ -43,7 +43,7 @@ class App extends React.Component {
   handleCount() {
     if (this.state.nominateList.length === 5) {
       alert(
-        'You have nominated 5 movies, we will only use first 5 movies added'
+        'You have nominated 5 movies, we will only use first 5 movies added.'
       );
     }
   }

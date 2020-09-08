@@ -9,7 +9,7 @@
 .Movie-action {
   cursor: pointer;
   padding: 0.5rem;
-  font-size: 0.83rem;
+  font-size: 0.5rem;
   font-family: 'Work Sans', sans-serif;
   transition: color 0.25s;
   border: 0px;
@@ -18,7 +18,7 @@
 }
 
 .Movie:hover {
-  color: rgba(265, 265, 265, 0.5);
+  color: goldenrod;
 }
 
 .Movie-information {
@@ -26,15 +26,11 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 72px;
-}
-
-.Movie-information h3 {
-  margin-bottom: 0.22rem;
+  height: 64px;
 }
 
 .Movie-information p {
   font-size: 0.83rem;
-  font-weight: 300;
+  font-weight: 500;
   color: rgba(256, 256, 256, 0.8);
 }

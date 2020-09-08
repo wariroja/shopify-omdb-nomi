@@ -7,7 +7,7 @@ class SearchResults extends React.Component {
   render() {
     return (
       <div className='SearchResults'>
-        <h2>Results for 'searchterm' </h2>
+        <h2>Search Results</h2>
         <MovieList
           movies={this.props.searchResults}
           addMovie={this.props.addMovie}

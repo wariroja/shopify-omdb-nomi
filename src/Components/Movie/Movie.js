@@ -11,7 +11,7 @@ class Movie extends React.Component {
     this.onClicks = this.onClicks.bind(this);
   }
   renderAction() {
-    //waiting for props to be pass through from state is APP
+    //waiting for props to be pass through from state
     if (this.props.isRemoval) {
       return (
         <button className='Movie-action' onClick={this.removeMovie}>
