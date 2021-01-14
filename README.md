@@ -1,6 +1,6 @@
 <!-- @format -->
 
-## Shopify Web Developer Intern Challenge.
+# Nominate Movies using OMDB's API
 
 Project is deployed at [http://myshoppies.surge.sh]
 
