@@ -1,6 +1,6 @@
 <!-- @format -->
 
-# Nominate Movies using OMDB's API
+# Nominate movies using OMDB's API
 
 Project is deployed at [http://myshoppies.surge.sh]
 
